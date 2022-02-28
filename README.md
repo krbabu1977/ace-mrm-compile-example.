@@ -19,7 +19,9 @@ should pass without error.
 ## Building from the command line
 
 This repo has been tested on Linux and Windows; Windows commands are shown in these examples
-but equivalent Linux commands work the same way.
+but equivalent Linux commands work the same way. While the `mqsicreatebar` command could be 
+used for this purpose, `ibmint deploy` is used in this case to avoid requiring the toolkit
+to be installed locally.
 
 ### Create a work directory
 ```
@@ -30,6 +32,8 @@ Successful command completion.
 ```
 
 ### Compile the application and message set using ibmint
+These instructions assume this repo has been cloned to `c:\Users\TrevorDolby\git\ace-mrm-compile-example` 
+and should be adjusted accordingly for other locations.
 ```
 C:\Program Files\IBM\ACE\12.0.3.0>ibmint deploy --input-path c:\Users\TrevorDolby\git\ace-mrm-compile-example --output-work-directory c:\tmp\mrm-compile-work-dir
 BIP8434I: Compiling message set 'c:\Users\TrevorDolby\git\ace-mrm-compile-example\RecordMRMIssue'
