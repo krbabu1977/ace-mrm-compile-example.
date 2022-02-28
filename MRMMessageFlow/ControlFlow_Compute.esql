@@ -1,0 +1,14 @@
+
+
+CREATE COMPUTE MODULE ControlFlow_Compute
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		SET OutputRoot.Properties = InputRoot.Properties;
+
+		/* Force a parse to ensure the message set is actually present */
+		DECLARE newXML CHARACTER '<message1><A1>A1Success</A1><A2>A2Success</A2><A3>A3Success</A3></message1>';
+		CREATE LASTCHILD OF OutputRoot DOMAIN('MRM') PARSE(CAST(newXML AS BLOB CCSID 1208), 546, 1208, 'RecordMRMIssue', '{}:message1', 'XML1', 0);
+		 
+		RETURN TRUE;
+	END;
+END MODULE;

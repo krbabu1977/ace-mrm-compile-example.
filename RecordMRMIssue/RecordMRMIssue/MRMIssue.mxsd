@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:element name="A1" type="xsd:string"/>
+  <xsd:element name="A2" type="xsd:string"/>
+  <xsd:element name="A3" type="xsd:string"/>
+  <xsd:complexType name="complexType">
+    <xsd:sequence>
+      <xsd:element ref="A1"/>
+      <xsd:element ref="A2"/>
+      <xsd:element ref="A3"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="message1" type="complexType">
+    <xsd:annotation>
+      <xsd:appinfo source="WMQI_APPINFO">
+        <MRMessage messageDefinition="/0/message1;XSDElementDeclaration=3$MRObject"/>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+</xsd:schema>
