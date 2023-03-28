@@ -12,7 +12,7 @@ and are parsed by the MRM parser.
 
 ## Getting started
 
-Clone this repo using the ACE 12.0.3 toolkit or git command. If using the toolkit, then running
+Clone this repo using the ACE 12 toolkit or git command. If using the toolkit, then running
 the MRMMessageFlow_Test project (right-click then "Run Test Project") should succeed and all tests
 should pass without error.
 
@@ -94,3 +94,38 @@ TOTALS:
   TIME(secs):0.207
 2022-02-28 13:10:09.422964: BIP9911I: Running tests in test project 'MRMMessageFlow_Test' completed successfully.
 ```
+
+## Pipeline
+
+Clone this repo using git, build the projects, and then run them using the IntegrationServer program.
+See [build-and-run-tests.sh](build-and-run-tests.sh) for a script that shows the sequence of commands.
+
+### Codespaces (experimental)
+
+This repo can be run in a container via GitHub codespaces, which are a feature of GitHub that enables 
+container-based development with VisualStudio Code in a web browser. The container in which vscode
+runs is configurable, and this repo uses a container with ACE installed.
+
+Developers get sixty hours of container runtime for free (at the time of writing), and a codespace can be launched from the "Code" menu:
+
+![Codespaces launch](/.devcontainer/codespaces-launch.png)
+
+The container will start up once the image has been downloaded (usually 100-150 seconds)
+and vscode will start automatically. All of the usual ACE commands are present, servers
+can be started as usual, etc. Running
+```
+./build-and-run-tests.sh
+```
+in the terminal will build and run the various tests for the projects.
+
+This repo is configured to use an ACE devcontainer that can run the toolkit in a browser 
+session; see https://github.com/trevor-dolby-at-ibm-com/ace-vnc-devcontainer for details on
+how to access the toolkit.
+
+### OpenShift Dev Spaces (experimental)
+
+This repo can be run in a container via OpenShift Dev Spaces, which are a feature of OpenShift
+that enables container-based development with VisualStudio Code in a web browser. The container
+in which vscode runs is configurable, and this repo is configured to use an ACE devcontainer
+that can run the toolkit in a browser session; see https://github.com/trevor-dolby-at-ibm-com/ace-dev-spaces-container
+for details on how to build/run the container images and access the toolkit.
