@@ -20,4 +20,4 @@ ibmint deploy --input-path . --output-work-directory /tmp/ace-mrm-compile-exampl
 ibmint optimize server --work-directory /tmp/ace-mrm-compile-example-work-dir
 
 # Run the server to run the tests
-IntegrationServer -w /tmp/ace-mrm-compile-example-work-dir --mq-queue-manager-name dummy --start-msgflows false --no-nodejs --admin-rest-api -1 --test-project MRMMessageFlow_Test
+IntegrationServer -w /tmp/ace-mrm-compile-example-work-dir --start-msgflows false --no-nodejs --admin-rest-api -1 --test-project MRMMessageFlow_Test
